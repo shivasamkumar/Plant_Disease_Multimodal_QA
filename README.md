@@ -1,6 +1,11 @@
 # Plant Disease QA & Detection
 
-A modular, end-to-end pipeline for plant disease diagnosis and interactive question-answering. Use state-of-the-art object detection (YOLO) together with an LLM retrieval-augmented generation (RAG) system to detect diseases from leaf images and answer follow-up questions.
+[![Python](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)  
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1u4GbZdSPj6pABmwVIY46jtBdqNdWKYmH#scrollTo=uxI0faoy8Fp7)  
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+
+
+This project combines automated web-scraping, retrieval-augmented LLM question‐answering, and custom object detection into a single, end-to-end pipeline for plant disease diagnosis: first, a helper notebook uses the Google Search API to gather and preprocess a “knowledge base” of plant-disease articles, which are then chunked, embedded via OpenAI, and stored in ChromaDB; next, a custom YOLO model detects and crops diseased regions from uploaded leaf images; finally, both the detection output and the most relevant text passages are wrapped as LangChain tools and served through a Gradio interface, allowing users to upload a leaf photo, see the highlighted disease area, and ask follow-up questions.
 
 ---
 
@@ -77,7 +82,41 @@ A modular, end-to-end pipeline for plant disease diagnosis and interactive quest
    Open **`Plant_Disease_QA_Rag.ipynb`** in Colab or Jupyter. Execute all cells—at the end, a Gradio UI will launch.  
    Upload a leaf photo and ask questions such as:  
    > “What disease is affecting this leaf?”  
-   > “What treatment methods are recommended for bacterial spot?”  
+   > “What treatment methods are recommended for bacterial spot?”
+
+## 📈Results 
+
+<p align="center">
+  <img src="newplot.png" alt="3D Plot" width="75%"/>
+</p>
+
+3D-Plot for Vector Embeddings
+
+<p align="center">
+  <img src="Screenshot 2025-06-12 125004.png" alt="Image detector" width="75%"/>
+</p>
+
+Image Detector Inference
+
+<p align="center">
+  <img src="Screenshot 2025-06-12 125056.png" alt="Chatbot GUI" width="75%"/>
+</p>
+Chat Bot GUI
+
+<p align="center">
+  <img src="Screenshot 2025-06-12 125152.png" alt="Disease Infrence" width="75%"/>
+</p>
+Disease Inference
+
+<p align="center">
+  <img src="Screenshot 2025-06-12 125246.png" alt="Debuuging" width="75%"/>
+</p>
+Debugging
+
+<p align="center">
+  <img src="Screenshot 2025-06-12 151004.png" alt="Image detector" width="75%"/>
+</p>
+Image detector in Chatbot
 
 ---
 
@@ -106,7 +145,12 @@ A modular, end-to-end pipeline for plant disease diagnosis and interactive quest
 
 ---
 
-## 📄 License
+## 📄 Useful Links 
 
-This project is licensed under the **MIT License**. See [LICENSE](LICENSE) for details.  
-Feel free to use, adapt, and extend for your research or applications.  
+Plant disease detector: [GitHub](https://github.com/shivasamkumar/Plant_Disease_and_weed_detector)
+
+Model File: [Model Link](https://drive.google.com/file/d/18j6vjY4O4dmUYPxRNkz1mKxrTzvdJujx/view?usp=sharing)
+
+Dataset: [Dataset](https://universe.roboflow.com/floragenic-9v9os/plant-disease-detection-3anip)
+
+
