@@ -3,7 +3,8 @@
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)  
 [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1u4GbZdSPj6pABmwVIY46jtBdqNdWKYmH#scrollTo=uxI0faoy8Fp7)  
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-
+ 
+---
 
 This project combines automated web-scraping, retrieval-augmented LLM question‐answering, and custom object detection into a single, end-to-end pipeline for plant disease diagnosis: first, a helper notebook uses the Google Search API to gather and preprocess a “knowledge base” of plant-disease articles, which are then chunked, embedded via OpenAI, and stored in ChromaDB; next, a custom YOLO model detects and crops diseased regions from uploaded leaf images; finally, both the detection output and the most relevant text passages are wrapped as LangChain tools and served through a Gradio interface, allowing users to upload a leaf photo, see the highlighted disease area, and ask follow-up questions.
 
